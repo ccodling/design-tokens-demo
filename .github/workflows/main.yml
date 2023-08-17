@@ -17,11 +17,15 @@ jobs:
       # Setup node to use with CLI. 14+ is required
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       
       # Install Supernova CLI
       - name: Install Supernova CLI dependency
         run: npm install --g @supernovaio/cli
+
+      # Install Dependencies
+      - name: Install Dev dependencies
+        run: npm install
 
       # Sync tokens
       - name: Synchronize tokens with Supernova 
@@ -29,5 +33,13 @@ jobs:
           supernova sync-tokens 
           --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
           --designSystemId="70580" 
-          --tokenFilePath "${{ github.workspace }}/tokens.json" 
+          --tokenFilePath "${{ github.workspace }}/tokens/tokens.json" 
           --configFilePath "${{ github.workspace }}/supernova.settings.json"
+
+      # Generate Tokens
+      - name: Generate tokens
+        run: npm run token-pipeline
+
+      # Build App
+      - name: Build the demo application
+        run: npm run build
