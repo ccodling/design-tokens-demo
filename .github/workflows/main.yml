@@ -24,7 +24,7 @@ jobs:
         run: npm install --g @supernovaio/cli
 
       # Install Dependencies
-      - name: Install Supernova CLI dependency
+      - name: Install Dev dependencies
         run: npm install
 
       # Sync tokens
