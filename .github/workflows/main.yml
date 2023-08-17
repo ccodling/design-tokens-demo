@@ -17,7 +17,7 @@ jobs:
       # Setup node to use with CLI. 14+ is required
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       
       # Install Supernova CLI
       - name: Install Supernova CLI dependency
@@ -41,5 +41,5 @@ jobs:
         run: npm run token-pipeline
 
       # Build App
-      - name: Builde the demo application
+      - name: Build the demo application
         run: npm run build
