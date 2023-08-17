@@ -2,8 +2,8 @@ name: Figma Token sync > Supernova
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ develop ]
-    
+    branches: [develop]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      
+
       # Install Supernova CLI
       - name: Install Supernova CLI dependency
         run: npm install --g @supernovaio/cli
@@ -28,18 +28,13 @@ jobs:
         run: npm install
 
       # Sync tokens
-      - name: Synchronize tokens with Supernova 
+      - name: Synchronize tokens with Supernova
         run: >
-          supernova sync-tokens 
-          --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
-          --designSystemId="70580" 
-          --tokenFilePath "${{ github.workspace }}/tokens/tokens.json" 
-          --configFilePath "${{ github.workspace }}/supernova.settings.json"
+          supernova sync-tokens  --apiKey="${{ secrets.SN_ACCESS_TOKEN }}"
+          --designSystemId="70580"  --tokenFilePath "${{ github.workspace
+          }}/tokens/tokens.json"  --configFilePath "${{ github.workspace
+          }}/supernova.settings.json"
 
       # Generate Tokens
       - name: Generate tokens
         run: npm run token-pipeline
-
-      # Build App
-      - name: Build the demo application
-        run: npm run build

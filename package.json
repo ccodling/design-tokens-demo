@@ -21,7 +21,7 @@
     "gen-tokens-brand2-dark": "token-transformer tokens/tokens.json tokens/output/brand2-dark.json global,brand2-dark global",
     "gen-styles": "node ./infrastructure/generate-styles.js",
     "postcss": "postcss apps/advisor-desktop-css/src/styles/styles.css -o apps/advisor-desktop-css/src/main.css",
-    "token-pipeline": "run-s supernova-cli gen-tokens gen-styles postcss",
+    "token-pipeline": "run-s gen-tokens gen-styles postcss",
     "supernova-cli": "supernova sync-tokens --apiKey=\"sn.fPjy8c7oJUFIn6bvlcOY9rxfJm71mVWRndUkAuyLn7TabDEbCdpYKLly4i7bWS0n68tuk6UR2d7yMRaAFAv0tVWAjQfDv5Si\" --designSystemId=\"70580\" --tokenFilePath \"tokens/tokens.json\" --configFilePath \"supernova.settings.json\""
   },
   "devDependencies": {
