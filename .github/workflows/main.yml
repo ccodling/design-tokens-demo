@@ -32,6 +32,10 @@ jobs:
           --tokenFilePath "${{ github.workspace }}/tokens/tokens.json" 
           --configFilePath "${{ github.workspace }}/supernova.settings.json"
 
-      # Build Assets
+      # Generate Tokens
       - name: Generate tokens
-        run: npm run token-pipeline build
+        run: npm run token-pipeline
+
+      # Build App
+      - name: Builde the demo application
+        run: npm run build
