@@ -31,3 +31,7 @@ jobs:
           --designSystemId="70580" 
           --tokenFilePath "${{ github.workspace }}/tokens/tokens.json" 
           --configFilePath "${{ github.workspace }}/supernova.settings.json"
+
+      # Build Assets
+      - name: Generate tokens
+        run: npm run token-pipeline build
