@@ -10,12 +10,13 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const FirstStory: Story = {
+export const Basic: Story = {
   args: {
     rootClass: 'ml-1',
     color: 'primary',
     disabled: false,
     size: 'medium',
     variant: 'contained',
+    children: 'Button',
   },
 };
