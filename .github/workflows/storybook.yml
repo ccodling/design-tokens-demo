@@ -15,7 +15,7 @@ jobs:
         run: |
           npm ci
           npm run build-storybook
-        working-directory: ./apps/advisor-desktop-css
+        working-directory: apps/advisor-desktop-css
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
