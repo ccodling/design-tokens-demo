@@ -14,7 +14,8 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
-          npm --prefix apps/advisor-desktop-css run build-storybook
+          npm run build-storybook
+        working-directory: ./apps/advisor-desktop-css
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
