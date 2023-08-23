@@ -146,7 +146,7 @@ function getTokenSetConfig(tokenSet) {
           'font/weights',
           'font/letterSpacing',
         ],
-        buildPath: './apps/advisor-desktop-css/src/styles/output/',
+        buildPath: 'apps/advisor-desktop-css/src/styles/output/',
         files: [
           {
             destination: `${tokenSet}.json`,
