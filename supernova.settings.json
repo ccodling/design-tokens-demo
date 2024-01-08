@@ -24,7 +24,7 @@
                 "semantic",
                 "brand2-light"
             ],
-            "supernovaBrand": "brand2",
+            "supernovaBrand": "Brand2",
             "supernovaTheme": null
         },
         {
@@ -32,7 +32,7 @@
                 "global",
                 "brand2-dark"
             ],
-            "supernovaBrand": "brand2",
+            "supernovaBrand": "Brand2",
             "supernovaTheme": "Dark"
         }
     ],
